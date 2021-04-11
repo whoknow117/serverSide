@@ -16,11 +16,7 @@ class InfoController {
          }
     }
 
-    // async getAll(req,res) {
-    //     let {typeId} = req.query
-    //     let info;
-    //
-    // }
+
 
     async getAllTypeId(req, res) {
         let {typeId} = req.query

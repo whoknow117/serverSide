@@ -26,7 +26,7 @@ class DeviceController {
             const {img} = req.files
             let promises = []
             let fileName = '';
-            console.log(img)
+
             let newArray = []
             img.forEach(file => {
                 fileName = uuid.v4() + '.jpg'
@@ -34,7 +34,7 @@ class DeviceController {
                 newArray.push(fileName)
             })
             await Promise.all(promises)
-            console.log(newArray)
+
             const device = await Device.create({
                 name,
                 price,
