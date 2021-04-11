@@ -7,7 +7,7 @@ const fileUpload = require('express-fileupload')
 const router = require('./routes/index')
 const authMiddleware = require('./middlewares/AutMiddleware')
 const errorHandler = require('./middlewares/ErrorHandlingMiddleware')
-const PORT =  process.env.PORT || 5000
+// const PORT =  process.env.PORT || 5000
 const path = require('path')
 
 const app = express()
@@ -26,7 +26,7 @@ const start = async () => {
         await sequelize.authenticate()
         await sequelize.sync()
 
-        app.listen( process.env.PORT || PORT, () => console.log(`start on ${PORT}`))
+        app.listen( process.env.PORT || 5000, () => console.log(`start on ${PORT}`))
     }
     catch (e) {
 
